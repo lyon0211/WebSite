@@ -1,1 +1,40 @@
 
+<style>
+  #Title {
+    background-color: pink;
+    color: black;
+    padding: 10 px;
+    text-align: center;
+    border-radius: 50%;
+  }
+</style>
+
+<style>
+  #ButtonDance {
+    background-color: skyblue;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 50 px;
+    text-align: center;
+    border-radius: 50%;
+  }
+</style>
+
+<style>
+  #ButtonOther {
+    background-color: skyblue;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 50 px;
+    text-align: center;
+    border-radius: 50%;
+  }
+</style>
