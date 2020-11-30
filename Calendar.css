@@ -1,0 +1,40 @@
+h1 {
+  font-family: arial;
+  text-align: center;
+}
+h2{
+  font-family: arial;
+  text-align: right;
+  margin-right: 20px;
+}
+span {
+  font-family: arial;
+  /* display: block;
+  text-align: right; */
+  margin-right: 20px;
+  float: right;
+}
+h3{
+  font-family: arial;
+}
+button{
+  font-family: arial;
+
+  height: 40px;
+  width: 200px;
+}
+p{
+  font-family: arial;
+  margin-left: 25%;
+}
+
+table{
+  width: 100%;
+  border: 1px solid black;
+}
+
+table, td {
+  font-family: arial;
+  border: 1px solid black;
+  text-align: center;
+}
