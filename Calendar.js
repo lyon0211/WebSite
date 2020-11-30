@@ -1,16 +1,19 @@
-function display_c() {
+//refreshes time every second
+function displayC() {
   var refresh = 1000; // Refresh rate in milli seconds
-  mytime = setTimeout('display_ct()', refresh)
+  mytime = setTimeout('displayCT()', refresh)
 }
 
-function display_ct() {
+//displays the time
+function displayCT() {
   var x3 = getTime();
   document.getElementById('ct').innerHTML = x3;
-  display_c();
+  displayC();
 }
 
-var clickCount = 0;
-function start_time(){
+var clickCount = 0; //number of times the start/end event and start next one button has been pressed
+//puts the starting time in the table the first time the button is clicked, then, each subsequent time, puts in the end time, which becomes the next start time
+function startTime(){
   clickCount++;
   var x3 = getTime();
   var table = document.getElementById('time_table');
@@ -33,7 +36,8 @@ function start_time(){
   }
 }
 
-function end_and_save(){
+//Logs the final end time and saves the table as a pdf
+function endAndSave(){
   var x3 = getTime();
   var table = document.getElementById('time_table');
   var row = table.rows[table.rows.length - 1];
@@ -57,6 +61,7 @@ function end_and_save(){
   });
 }
 
+//fetches the current time
 function getTime(){
   var x = new Date()
   var month = x.getMonth() + 1;
@@ -84,4 +89,15 @@ function getTime(){
   }
   var x3 = x3 + ' ' + hour + ':' + minute + ':' + second
   return x3;
+}
+
+//clears the table except for the top row
+function emptyTable(){
+  var table = document.getElementById('time_table');
+  var i;
+  for (i = (table.rows.length - 1); i>0; i--){
+    table.deleteRow(i);
+  }
+  clickCount = 0;
+  document.getElementById('start').innerHTML = "Start";
 }
